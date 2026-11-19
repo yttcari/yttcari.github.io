@@ -1,0 +1,55 @@
+{% unless page.url == '/404.html' %}
+<style>
+  .coffee-teapot {
+    position: fixed;
+    right: 1.2em;
+    bottom: 1.2em;
+    z-index: 30;
+    width: 56px;
+    display: block;
+    text-decoration: none;
+  }
+  .coffee-teapot svg { width: 100%; height: auto; display: block; overflow: visible; filter: drop-shadow(0 2px 4px rgba(0,0,0,.3)); }
+  .coffee-teapot .lid { transform-origin: 38px 22px; transition: transform .25s ease; }
+  .coffee-teapot:hover .lid, .coffee-teapot:focus-visible .lid { transform: translate(-6px, -12px) rotate(-28deg); }
+  .coffee-teapot .steam { opacity: 0; transition: opacity .25s ease; }
+  .coffee-teapot:hover .steam, .coffee-teapot:focus-visible .steam { opacity: .8; }
+  .coffee-teapot .tip {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 10px);
+    white-space: nowrap;
+    padding: .35em .7em;
+    border-radius: 8px;
+    font-size: .8rem;
+    background: #0b0d24;
+    color: #e8eaf6;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity .2s ease, transform .2s ease;
+    pointer-events: none;
+  }
+  .coffee-teapot:hover .tip, .coffee-teapot:focus-visible .tip { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .coffee-teapot .lid, .coffee-teapot .tip, .coffee-teapot .steam { transition: none; } }
+</style>
+<a class="coffee-teapot" href="{{ '/404.html' | relative_url }}" aria-label="Grab a cup of coffee">
+  <span class="tip">Grab a cup of coffee ☕</span>
+  <svg viewBox="0 0 64 56" role="img" aria-hidden="true">
+    <g class="steam" fill="none" stroke="#9fc5ff" stroke-width="2" stroke-linecap="round">
+      <path d="M26 14c-3-3 3-5 0-9"/><path d="M34 14c-3-3 3-5 0-9"/>
+    </g>
+    <!-- handle -->
+    <path d="M13 26c-9 0-9 14 0 14" fill="none" stroke="#c0763c" stroke-width="4" stroke-linecap="round"/>
+    <!-- spout -->
+    <path d="M50 28c6-2 9-8 12-10-1 8-3 16-12 18z" fill="#d98b4a"/>
+    <!-- body -->
+    <path d="M12 28c0-6 8-8 19-8s19 2 19 8v10c0 9-8 14-19 14s-19-5-19-14z" fill="#d98b4a"/>
+    <path d="M18 30c4-2 8-3 13-3" stroke="#f3c08b" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- lid -->
+    <g class="lid">
+      <path d="M21 21c0-3 4-4 10-4s10 1 10 4z" fill="#c0763c"/>
+      <circle cx="31" cy="15" r="3" fill="#a05f2c"/>
+    </g>
+  </svg>
+</a>
+{% endunless %}
