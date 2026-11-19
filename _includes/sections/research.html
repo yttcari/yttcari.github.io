@@ -1,0 +1,4 @@
+{% assign items = site.research | sort: "date" | reverse %}
+{% for post in items %}
+  {% include archive-single-simple.html %}
+{% endfor %}

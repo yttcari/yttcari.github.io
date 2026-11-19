@@ -441,3 +441,25 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+/* One-page layout: nav links scroll to sections on the home page */
+html {
+  scroll-behavior: smooth;
+}
+
+.page-section {
+  clear: both;
+  padding-top: 1em;
+  scroll-margin-top: $masthead-height;
+  border-top: 1px solid var(--global-border-color, #f2f3f3);
+
+  &__title {
+    margin-top: 1em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

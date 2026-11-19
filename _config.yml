@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Your Name / Site Title"
+title                    : "Cari Tsang"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+name                     : &name "Cari Tsang"
+description              : &description "Cari Tsang's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://yttcari.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,12 +23,12 @@ repository               : "yttcari/yttcari.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "Profile.jpg"
   name             : "Cari Tsang"
   pronouns         : # example: "she/her"  
   bio              : "Astronomy Enthusiast"
   location         : "Hong Kong"
-  employer         : "Chinese University of Hong Kong"
+  employer         : "CUHK"
   uri              : # URL
   email            : "yttcari@link.cuhk.edu.hk" 
 
@@ -222,16 +222,16 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
   talks:
+    output: true
+    permalink: /:collection/:path/
+  research:
+    output: true
+    permalink: /:collection/:path/
+  education:
+    output: true
+    permalink: /:collection/:path/
+  awards:
     output: true
     permalink: /:collection/:path/
 
@@ -256,33 +256,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
   # _talks
   - scope:
       path: ""
@@ -291,6 +264,25 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+  # _research, _education, _awards
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: education
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: awards
+    values:
+      layout: single
+      author_profile: true
 
 
 # Sass/SCSS
