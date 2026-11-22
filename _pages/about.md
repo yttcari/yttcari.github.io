@@ -9,8 +9,6 @@ redirect_from:
 My name is Yi Tung Tsang, or more usually Cari. I am currently a final year undergraduate student in Chinese University of Hong Kong.
 My research lies in compact object and computational astrophysics. 
 
-Feel free to grab a coffee down below :)
-
 <section id="talks" class="page-section">
 <h1 class="page-section__title">Talks and presentations</h1>
 {% include sections/talks.html %}
